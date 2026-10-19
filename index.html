@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Packlab Studio — Diseño de packaging</title>
+<meta name="description" content="Diseña mockups y plantillas de packaging en tu navegador.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#"><span class="brand-mark">P</span><span>packlab<span class="muted">studio</span></span></a>
+  <nav><a href="#explore">Explorar</a><a href="#tools">Herramientas</a><a href="#workflow">Cómo funciona</a></nav>
+  <div class="top-actions"><button class="ghost" id="openProjects">Mis proyectos</button><button class="dark" id="startTop">Empezar gratis <span>↗</span></button></div>
+  <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">☰</button>
+</header>
+<main>
+<section class="hero">
+  <div class="hero-copy">
+    <div class="eyebrow"><span class="pulse"></span> TU ESTUDIO CREATIVO, EN EL NAVEGADOR</div>
+    <h1>Del concepto al<br><em>packaging real.</em></h1>
+    <p class="hero-lede">Crea, personaliza y presenta tus diseños de packaging con herramientas sencillas y una vista previa interactiva.</p>
+    <div class="hero-buttons"><button class="primary" id="startHero">Crear un diseño <span>↗</span></button><a class="text-link" href="#explore">Explorar modelos <span>↓</span></a></div>
+    <div class="social-proof"><div class="avatars"><span>A</span><span>M</span><span>J</span><span>+</span></div><div><strong>Ideas que toman forma</strong><small>Mockups · Plantillas · Diseño</small></div></div>
+  </div>
+  <div class="hero-art">
+    <div class="art-glow"></div><div class="floating-label label-top">01 / MOCKUP 3D</div>
+    <div class="scene">
+      <div class="box3d"><div class="box-top"></div><div class="box-front"><span>YOUR<br>BRAND</span><small>BOTANICAL GOODS</small><div class="leaf">✳</div></div><div class="box-side"></div></div>
+      <div class="cylinder"><div class="cyl-top"></div><span>PURE<br>FORM</span><small>daily essentials</small></div>
+      <div class="mini-box"><span>GOOD<br>THINGS</span></div>
+      <div class="platform"></div>
+    </div>
+    <div class="floating-label label-bottom"><span class="green-dot"></span> Vista previa en vivo</div>
+    <div class="art-note">Diseña con intención.<br><strong>Presenta con confianza.</strong></div>
+  </div>
+</section>
+<section class="stats"><div><strong>01</strong><span>Diseña tu concepto</span></div><div><strong>02</strong><span>Personaliza cada detalle</span></div><div><strong>03</strong><span>Exporta y comparte</span></div><div class="stats-note">Hecho para ideas<br>que merecen verse bien.</div></section>
+<section class="section explore" id="explore">
+  <div class="section-head"><div><div class="eyebrow">BIBLIOTECA DE FORMATOS</div><h2>Empieza con una forma.</h2></div><p>Elige un formato y personalízalo para que encaje con tu marca.</p></div>
+  <div class="category-grid">
+    <button class="category-card selected" data-type="box"><div class="cat-visual visual-box"><span></span></div><div class="cat-bottom"><div><strong>Caja de producto</strong><small>Packaging clásico</small></div><b>↗</b></div></button>
+    <button class="category-card" data-type="bottle"><div class="cat-visual visual-bottle"><span></span></div><div class="cat-bottom"><div><strong>Botella</strong><small>Cuidado personal y bebidas</small></div><b>↗</b></div></button>
+    <button class="category-card" data-type="pouch"><div class="cat-visual visual-pouch"><span></span></div><div class="cat-bottom"><div><strong>Bolsa flexible</strong><small>Snacks y café</small></div><b>↗</b></div></button>
+    <button class="category-card" data-type="cup"><div class="cat-visual visual-cup"><span></span></div><div class="cat-bottom"><div><strong>Vaso</strong><small>Bebidas para llevar</small></div><b>↗</b></div></button>
+  </div>
+</section>
+<section class="workspace-section" id="tools">
+  <div class="section-head"><div><div class="eyebrow">TU ESPACIO DE TRABAJO</div><h2>Un diseño, mil posibilidades.</h2></div><p>Prueba colores, sube tu arte y ajusta las dimensiones en tiempo real.</p></div>
+  <div class="workspace">
+    <aside class="tool-panel">
+      <div class="panel-title"><span>✳</span><div><strong>Editor de diseño</strong><small>Personaliza tu modelo</small></div></div>
+      <label for="projectName">Nombre del proyecto</label><input id="projectName" value="Mi packaging" maxlength="60">
+      <label for="brandText">Texto de marca</label><input id="brandText" value="YOUR BRAND" maxlength="32">
+      <label>Color principal</label><div class="swatches"><button class="swatch active" data-color="#d6e5b5" style="--swatch:#d6e5b5" aria-label="Verde salvia"></button><button class="swatch" data-color="#f0d6b8" style="--swatch:#f0d6b8" aria-label="Arena"></button><button class="swatch" data-color="#d9c9ed" style="--swatch:#d9c9ed" aria-label="Lavanda"></button><button class="swatch" data-color="#f1b9b0" style="--swatch:#f1b9b0" aria-label="Rosa"></button><button class="swatch" data-color="#222b27" style="--swatch:#222b27" aria-label="Carbón"></button><input type="color" id="customColor" value="#d6e5b5" title="Color personalizado"></div>
+      <label for="finish">Acabado</label><select id="finish"><option value="matte">Mate natural</option><option value="gloss">Brillante</option><option value="kraft">Papel kraft</option></select>
+      <div class="dimensions"><label>Dimensiones (mm)</label><div><input type="number" id="dimW" value="120" min="20" max="500" aria-label="Ancho"><span>×</span><input type="number" id="dimH" value="180" min="20" max="500" aria-label="Alto"><span>×</span><input type="number" id="dimD" value="60" min="10" max="300" aria-label="Fondo"></div></div>
+      <label for="artUpload" class="upload-label">Añadir imagen o logotipo <span>＋</span></label><input type="file" id="artUpload" accept="image/*" hidden>
+      <button class="outline full" id="resetDesign">Restablecer diseño</button>
+    </aside>
+    <div class="preview-area">
+      <div class="preview-toolbar"><div><span class="live-dot"></span><strong>Vista previa</strong><small id="previewType">Caja de producto</small></div><div class="view-actions"><button id="rotateBtn" title="Cambiar ángulo">⟳ <span>Rotar</span></button><button id="gridBtn" title="Mostrar cuadrícula">▦</button><button id="fullscreenBtn" title="Vista ampliada">⛶</button></div></div>
+      <div class="preview-canvas" id="previewCanvas"><div class="canvas-grid"></div><div class="preview-object" id="previewObject"><div class="object-top"></div><div class="object-front"><div class="object-brand" id="objectBrand">YOUR<br>BRAND</div><div class="object-art" id="objectArt">✳</div><div class="object-sub">BOTANICAL GOODS</div></div><div class="object-side"></div></div><div class="canvas-caption">PACKLAB / PREVIEW 01</div></div>
+      <div class="preview-footer"><div><span class="tiny-icon">◈</span><span id="dimensionLabel">120 × 180 × 60 mm</span></div><div><span class="green-dot"></span> Cambios guardados localmente</div></div>
+    </div>
+  </div>
+
+  <section class="dieline-section" id="dieline">
+    <div class="dieline-heading">
+      <div><div class="eyebrow">PLANO 2D · TROQUEL CONCEPTUAL</div><h3>Del volumen al plano.</h3><p>Genera una plantilla SVG editable con líneas de corte y pliegue a partir de las dimensiones de tu modelo.</p></div>
+      <div class="dieline-actions"><button class="outline" id="refreshDieline">Actualizar plano</button><button class="primary" id="downloadDieline">Descargar SVG ↗</button></div>
+    </div>
+    <div class="dieline-workspace">
+      <div class="dieline-legend"><span><i class="legend-cut"></i> Corte</span><span><i class="legend-fold"></i> Pliegue</span><span><i class="legend-dim"></i> Medidas</span></div>
+      <div class="dieline-preview" id="dielinePreview" aria-label="Vista previa del troquel SVG"></div>
+      <div class="dieline-meta"><span id="dielineType">Caja de producto · plantilla conceptual</span><span id="dielineSize">— mm de ancho total</span></div>
+    </div>
+    <p class="dieline-disclaimer"><strong>Nota:</strong> plantilla conceptual para prototipado. Antes de fabricar, valida pestañas, tolerancias, material, sangrado y especificaciones con tu proveedor de packaging.</p>
+  </section>
+  <div class="export-row"><div><strong>¿Listo para presentar?</strong><span>Guarda tu proyecto o exporta una vista previa.</span></div><div><button class="outline" id="saveProject">Guardar proyecto</button><button class="primary" id="exportBtn">Exportar vista previa ↗</button></div></div>
+</section>
+<section class="workflow section" id="workflow"><div class="eyebrow">UN FLUJO SENCILLO</div><h2>De la idea a la presentación.</h2><div class="steps"><article><span>01</span><div class="step-icon">▧</div><h3>Elige tu formato</h3><p>Empieza con una caja, botella, bolsa o vaso como punto de partida.</p></article><article><span>02</span><div class="step-icon">✳</div><h3>Hazlo tuyo</h3><p>Ajusta la paleta, los textos y las dimensiones para explorar tu concepto.</p></article><article><span>03</span><div class="step-icon">↗</div><h3>Compártelo</h3><p>Descarga una imagen de la vista previa o guarda tu proyecto en este navegador.</p></article></div></section>
+<section class="cta"><div><div class="eyebrow">TU PRÓXIMA GRAN IDEA</div><h2>Todo empieza con<br>un buen diseño.</h2></div><button class="light-button" id="startBottom">Abrir el editor <span>↗</span></button><div class="cta-decoration">P.</div></section>
+</main>
+<footer><a class="brand" href="#"><span class="brand-mark">P</span><span>packlab<span class="muted">studio</span></span></a><span>Un espacio independiente para ideas de packaging.</span><span>© <span id="year"></span> Packlab Studio</span></footer>
+<div class="toast" id="toast" role="status"></div>
+<div class="modal-backdrop" id="projectsModal"><div class="modal"><button class="modal-close" id="closeProjects">×</button><div class="eyebrow">TU ESPACIO</div><h2>Mis proyectos</h2><p>Los diseños guardados se almacenan en este navegador.</p><div id="projectsList" class="projects-list"></div><button class="primary full" id="newProject">Crear nuevo proyecto</button></div></div>
+<script src="app.js"></script>
+</body></html>
